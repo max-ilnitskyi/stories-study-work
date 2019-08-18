@@ -91,23 +91,28 @@ class PageContentMyStories extends React.Component {
   }
 
   getCurrentStoriesList(currentPageNum) {
+    const allStoriesList = this.props.allStoriesList;
+
     // Return currentStoriesList if exist for current page
     if (
       this.currentStoriesList &&
-      this.currentStoriesList.page === currentPageNum
+      this.currentStoriesList.page === currentPageNum &&
+      this.currentStoriesList.full === allStoriesList
     )
       return this.currentStoriesList;
 
     // Make and return new currentStoriesList, if allStoriesList already fetched
-    if (this.props.allStoriesList) {
+    if (allStoriesList) {
       const storiesOnPage = this.storiesOnPage;
 
       // Slice stories for current page
-      const currentStoriesList = this.props.allStoriesList.slice(
+      const currentStoriesList = allStoriesList.slice(
         (currentPageNum - 1) * storiesOnPage,
         currentPageNum * storiesOnPage
       );
       currentStoriesList.page = currentPageNum; // Point page of stories
+
+      currentStoriesList.full = allStoriesList; // Point full array
 
       this.currentStoriesList = currentStoriesList; // Save current list
 

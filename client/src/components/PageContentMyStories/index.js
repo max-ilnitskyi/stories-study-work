@@ -181,6 +181,7 @@ class PageContentMyStories extends React.Component {
         currentPageNum * storiesOnPage
       );
       currentStoriesList.page = currentPageNum; // Point page of stories
+
       currentStoriesList.full = myStoriesList; // Point full list
 
       this.currentStoriesList = currentStoriesList; // Save current list
