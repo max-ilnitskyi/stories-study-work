@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Button from './Button';
-import LinksDropList from './LinksDropList';
+import Button from '../Button';
+import LinksDropList from '../LinksDropList';
+import LeftIcon from './LeftIcon';
+import RightIcon from './RightIcon';
 
 const LinkForAs = Button.withoutCustomProps(Link);
 
@@ -13,6 +15,8 @@ const PaginationWrap = styled.div`
 `;
 
 const NearButton = styled(Button)`
+  width: 40px;
+
   &:first-of-type {
     margin-right: 10px;
   }
@@ -45,7 +49,7 @@ class Pagination extends React.Component {
           disabled={prevPage.isDisabled}
           onClick={this.handlePageClick}
         >
-          Prev.
+          <LeftIcon />
         </NearButton>
 
         <LinksDropList pages={pages} currentPageNum={currentPageNum} />
@@ -56,7 +60,7 @@ class Pagination extends React.Component {
           disabled={nextPage.isDisabled}
           onClick={this.handlePageClick}
         >
-          Next
+          <RightIcon />
         </NearButton>
       </PaginationWrap>
     );

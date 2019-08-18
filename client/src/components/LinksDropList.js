@@ -30,6 +30,7 @@ const LinksDropListWrap = styled.div`
 
 const PlaceHolder = styled.div`
   ${pageCommon}
+  position: relative;
 
   :focus {
     background-color: #ddd;
