@@ -1,0 +1,41 @@
+{
+  "name": "stories-study-work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "engines": {
+    "node": "10.16.0"
+  },
+  "scripts": {
+    "build": "cd client && npm i && npm run build",
+    "start": "node server",
+    "client": "cd client && npm run start",
+    "server": "nodemon server",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "concurrently": "^4.1.0",
+    "connect-mongo": "^2.0.3",
+    "express": "^4.16.4",
+    "express-session": "^1.16.2",
+    "helmet": "^3.18.0",
+    "mongoose": "^5.6.5",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
+  }
+}
