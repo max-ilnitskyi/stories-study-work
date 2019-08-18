@@ -42,7 +42,7 @@ const ButtonsWrap = styled.div`
     margin-left: 5px;
   }
 
-  @media (min-width: ${constants.breakpoints.TABLET}px) {
+  @media (min-width: 420px) {
     flex-direction: row;
   }
 
@@ -59,7 +59,7 @@ const StoryButton = styled(Button)`
   font-size: 16px;
   margin-bottom: 5px;
 
-  @media (min-width: ${constants.breakpoints.TABLET}px) {
+  @media (min-width: 420px) {
     margin-bottom: 0;
   }
 `;
@@ -67,7 +67,8 @@ const StoryButton = styled(Button)`
 const StoryTitle = styled.h3``;
 
 const StoryText = styled.p`
-  margin-top: 10px;
+  margin-top: 20px;
+  clear: both;
 `;
 
 const OtherDataWrap = styled.div`
