@@ -132,7 +132,6 @@ class PageContentMyStories extends React.Component {
       const pagesAmount = Math.ceil(
         this.props.allStoriesList.length / this.storiesOnPage
       );
-      // debugger;
       for (let i = 2; i <= pagesAmount; i++) {
         pages.push({ href: `${mainAddress}/${i}`, text: `Page ${i}` });
       }
