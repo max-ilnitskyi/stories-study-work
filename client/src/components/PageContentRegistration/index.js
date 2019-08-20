@@ -23,8 +23,8 @@ class PageRegistration extends React.Component {
 
         {this.props.user && (
           <Paragraph>
-            You are logged in.{' '}
-            <TextLink to={myStoriesLink.href}>Post your own stories</TextLink>{' '}
+            You are logged in. Now you can{' '}
+            <TextLink to={myStoriesLink.href}>post your own stories</TextLink>{' '}
             or{' '}
             <TextLink to={allStoriesLink.href}>
               read stories of other people.
