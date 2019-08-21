@@ -52,7 +52,11 @@ class Pagination extends React.Component {
           <LeftIcon />
         </NearButton>
 
-        <LinksDropList pages={pages} currentPageNum={currentPageNum} />
+        <LinksDropList
+          onClick={this.handlePageClick}
+          pages={pages}
+          currentPageNum={currentPageNum}
+        />
 
         <NearButton
           as={LinkForAs}
@@ -68,7 +72,11 @@ class Pagination extends React.Component {
 
   handlePageClick = event => {
     // Not handle click if link is disabled
-    if (event.target.attributes.disabled) event.preventDefault();
+    if (event && event.target.attributes.disabled) {
+      event.preventDefault();
+    } else {
+      window.scrollTo(0, 0);
+    }
   };
 }
 

@@ -132,6 +132,7 @@ class LinksDropList extends React.Component {
 
   handlePageClick = event => {
     this.setState({ isOpen: false });
+    this.props.onClick();
   };
 
   handleEscapeDown = e => {
